@@ -613,7 +613,7 @@ static int safe_chdir(const char *pathname)
 {
   int res;
   if ((res = chdir(pathname)) < 0) {
-    printf("chdir failed");
+    perror("chdir failed");
     exit(-1);
   }
 
